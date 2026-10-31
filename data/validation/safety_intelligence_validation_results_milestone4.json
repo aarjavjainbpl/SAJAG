@@ -1,0 +1,1488 @@
+{
+  "summary": {
+    "metadata": {
+      "benchmark_version": "1.0.0",
+      "total_scenarios_evaluated": 40,
+      "provisional_human_review_labels": true,
+      "verified_ground_truth": false,
+      "disclaimer": "These metrics represent concordance against provisional human-review labels. They are NOT certified real-world accuracy or gold-standard validation."
+    },
+    "concordance_metrics": {
+      "sif_precursor_matches": 40,
+      "sif_precursor_mismatches": 0,
+      "sif_false_positives": [],
+      "sif_false_negatives": [],
+      "priority_badge_matches": 37,
+      "priority_badge_mismatches": [
+        {
+          "scenario_id": "VAL-034",
+          "expected": "MEDIUM_RISK",
+          "actual": "HIGH_PRECURSOR",
+          "risk_score": 75.0
+        },
+        {
+          "scenario_id": "VAL-037",
+          "expected": "LOW_ROUTINE",
+          "actual": "MEDIUM_RISK",
+          "risk_score": 47.5
+        },
+        {
+          "scenario_id": "VAL-040",
+          "expected": "LOW_ROUTINE",
+          "actual": "MEDIUM_RISK",
+          "risk_score": 47.5
+        }
+      ],
+      "total_historical_osha_matches": 22,
+      "questionable_or_notable_osha_matches": [
+        {
+          "scenario_id": "VAL-016",
+          "issue": "High-energy failed-barrier scenario did not match any historical reference",
+          "details": "Hazard: Mechanical / Kinetic"
+        }
+      ],
+      "scenarios_flagged_for_manual_review_count": 8
+    },
+    "group_breakdown": {
+      "routine_housekeeping": {
+        "total": 10,
+        "sif_match": 10,
+        "sif_fp": 0,
+        "sif_fn": 0,
+        "priority_match": 10,
+        "priority_mismatch": 0,
+        "osha_matched": 0
+      },
+      "high_energy_failed_barrier": {
+        "total": 12,
+        "sif_match": 12,
+        "sif_fp": 0,
+        "sif_fn": 0,
+        "priority_match": 12,
+        "priority_mismatch": 0,
+        "osha_matched": 11
+      },
+      "effective_safeguards": {
+        "total": 10,
+        "sif_match": 10,
+        "sif_fp": 0,
+        "sif_fn": 0,
+        "priority_match": 10,
+        "priority_mismatch": 0,
+        "osha_matched": 9
+      },
+      "ambiguous_reports": {
+        "total": 8,
+        "sif_match": 8,
+        "sif_fp": 0,
+        "sif_fn": 0,
+        "priority_match": 5,
+        "priority_mismatch": 3,
+        "osha_matched": 2
+      }
+    }
+  },
+  "scenarios": [
+    {
+      "scenario_id": "VAL-001",
+      "category_group": "routine_housekeeping",
+      "description": "Coffee was spilled on the cafeteria floor and the area was cleaned immediately.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "LOW_ROUTINE",
+        "provisional_rationale": "Routine office/cafeteria housekeeping event with no high energy."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "LOW_ROUTINE",
+        "risk_score": 32.0,
+        "energy_source": "Low / Undetermined",
+        "barrier_status": "Intact",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Low",
+        "actual_outcome": "No Injury",
+        "explanation": "Routine observation detected involving 'spilled coffee'. No high-energy sources or life-threatening precursors identified. Assigned LOW_ROUTINE priority for local housekeeping or supervisor awareness.",
+        "historical_reference": {
+          "matched": false,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": null,
+          "source_file": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-002",
+      "category_group": "routine_housekeeping",
+      "description": "Janitor noticed spilled coffee on cafeteria tile floor near water cooler.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "LOW_ROUTINE",
+        "provisional_rationale": "Routine domestic housekeeping event with zero energy."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "LOW_ROUTINE",
+        "risk_score": 32.0,
+        "energy_source": "Low / Undetermined",
+        "barrier_status": "Intact",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Low",
+        "actual_outcome": "No Harm",
+        "explanation": "Routine observation detected involving 'spilled coffee'. No high-energy sources or life-threatening precursors identified. Assigned LOW_ROUTINE priority for local housekeeping or supervisor awareness.",
+        "historical_reference": {
+          "matched": false,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": null,
+          "source_file": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-003",
+      "category_group": "routine_housekeeping",
+      "description": "Water was spilled near the administrative water cooler. Paper towel placed over wet spot.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "LOW_ROUTINE",
+        "provisional_rationale": "Routine water spill in non-process administrative setting."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "LOW_ROUTINE",
+        "risk_score": 32.0,
+        "energy_source": "Low / Undetermined",
+        "barrier_status": "Intact",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Low",
+        "actual_outcome": "No Injury",
+        "explanation": "Routine observation detected involving 'spilled water'. No high-energy sources or life-threatening precursors identified. Assigned LOW_ROUTINE priority for local housekeeping or supervisor awareness.",
+        "historical_reference": {
+          "matched": false,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": null,
+          "source_file": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-004",
+      "category_group": "routine_housekeeping",
+      "description": "Overhead fluorescent lightbulb dim and flickering in interior stairwell between floor 1 and 2.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "LOW_ROUTINE",
+        "provisional_rationale": "Routine facility maintenance work order without electrical hazard exposure."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "LOW_ROUTINE",
+        "risk_score": 32.0,
+        "energy_source": "Low / Undetermined",
+        "barrier_status": "Intact",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Low",
+        "actual_outcome": "No Injury",
+        "explanation": "Routine observation detected involving 'lightbulb dim'. No high-energy sources or life-threatening precursors identified. Assigned LOW_ROUTINE priority for local housekeeping or supervisor awareness.",
+        "historical_reference": {
+          "matched": false,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": null,
+          "source_file": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-005",
+      "category_group": "routine_housekeeping",
+      "description": "Operator noticed their boot shoe was untied while walking across the locker room.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "LOW_ROUTINE",
+        "provisional_rationale": "Minor personal wardrobe observation with zero potential consequence."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "LOW_ROUTINE",
+        "risk_score": 32.0,
+        "energy_source": "Low / Undetermined",
+        "barrier_status": "Intact",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Low",
+        "actual_outcome": "No Harm",
+        "explanation": "Routine observation detected involving 'shoe untied'. No high-energy sources or life-threatening precursors identified. Assigned LOW_ROUTINE priority for local housekeeping or supervisor awareness.",
+        "historical_reference": {
+          "matched": false,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": null,
+          "source_file": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-006",
+      "category_group": "routine_housekeeping",
+      "description": "Visitor staging bin had safety glasses with dusty lenses and light scratches.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "LOW_ROUTINE",
+        "provisional_rationale": "Routine PPE replenishment observation in visitor center."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "LOW_ROUTINE",
+        "risk_score": 32.0,
+        "energy_source": "Low / Undetermined",
+        "barrier_status": "Intact",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Low",
+        "actual_outcome": "No Harm",
+        "explanation": "Routine observation detected involving 'dusty glasses'. No high-energy sources or life-threatening precursors identified. Assigned LOW_ROUTINE priority for local housekeeping or supervisor awareness.",
+        "historical_reference": {
+          "matched": false,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": null,
+          "source_file": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-007",
+      "category_group": "routine_housekeeping",
+      "description": "Console operator sustained a minor paper cut on index finger while filing shift handover log.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "LOW_ROUTINE",
+        "provisional_rationale": "First aid minor injury without energy release or disability."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "LOW_ROUTINE",
+        "risk_score": 32.0,
+        "energy_source": "Low / Undetermined",
+        "barrier_status": "Intact",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Low",
+        "actual_outcome": "First Aid",
+        "explanation": "Routine observation detected involving 'paper cut'. No high-energy sources or life-threatening precursors identified. Assigned LOW_ROUTINE priority for local housekeeping or supervisor awareness.",
+        "historical_reference": {
+          "matched": false,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": null,
+          "source_file": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-008",
+      "category_group": "routine_housekeeping",
+      "description": "Draftsman reported stiff lumbar knob on ergonomic office chair. Ergonomic check scheduled.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "LOW_ROUTINE",
+        "provisional_rationale": "Standard ergonomic adjustment request."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "LOW_ROUTINE",
+        "risk_score": 32.0,
+        "energy_source": "Low / Undetermined",
+        "barrier_status": "Intact",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Low",
+        "actual_outcome": "No Injury",
+        "explanation": "Routine observation detected involving 'ergonomic chair'. No high-energy sources or life-threatening precursors identified. Assigned LOW_ROUTINE priority for local housekeeping or supervisor awareness.",
+        "historical_reference": {
+          "matched": false,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": null,
+          "source_file": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-009",
+      "category_group": "routine_housekeeping",
+      "description": "Discarded cardboard coffee sleeve and trash on floor near reception desk entryway.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "LOW_ROUTINE",
+        "provisional_rationale": "Routine housekeeping trash pickup."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "LOW_ROUTINE",
+        "risk_score": 32.0,
+        "energy_source": "Low / Undetermined",
+        "barrier_status": "Intact",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Low",
+        "actual_outcome": "No Harm",
+        "explanation": "Routine observation detected involving 'trash on floor'. No high-energy sources or life-threatening precursors identified. Assigned LOW_ROUTINE priority for local housekeeping or supervisor awareness.",
+        "historical_reference": {
+          "matched": false,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": null,
+          "source_file": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-010",
+      "category_group": "routine_housekeeping",
+      "description": "Door knob loose on stationery supply storage cabinet in administrative hallway.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "LOW_ROUTINE",
+        "provisional_rationale": "Minor administrative facility maintenance work order."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "LOW_ROUTINE",
+        "risk_score": 32.0,
+        "energy_source": "Low / Undetermined",
+        "barrier_status": "Intact",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Low",
+        "actual_outcome": "No Harm",
+        "explanation": "Routine observation detected involving 'door knob loose'. No high-energy sources or life-threatening precursors identified. Assigned LOW_ROUTINE priority for local housekeeping or supervisor awareness.",
+        "historical_reference": {
+          "matched": false,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": null,
+          "source_file": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-011",
+      "category_group": "high_energy_failed_barrier",
+      "description": "During scaffold dismantling, a worker noticed that a suspended scaffold platform was unstable and a lanyard connection was damaged. Work was stopped before anyone fell.",
+      "provisional_review_labels": {
+        "expected_sif_flag": true,
+        "expected_priority": "CRITICAL_SIF",
+        "provisional_rationale": "High-energy gravity fall vector with compromised lanyard and platform instability."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": true,
+        "risk_priority": "CRITICAL_SIF",
+        "risk_score": 100.0,
+        "energy_source": "Kinetic (Gravity)",
+        "barrier_status": "Failed",
+        "barrier_name": "Fall Arrest Harness",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "Near Miss (No Physical Harm)",
+        "explanation": "\ud83d\udea8 SIF Precursor Detected: Report involves high-energy hazard [Gravity / Falls from Height - Kinetic (Gravity)] with critical barrier state 'Failed' on barrier [Fall Arrest Harness]. Crucial Safety Distinction: While the actual outcome was logged as 'Near Miss (No Physical Harm)', the potential consequence is evaluated as 'Critical / Fatal'. The presence of uncontrolled high energy means a catastrophic injury was narrowly avoided. Immediate engineering/barrier verification required.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 41.5,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-012",
+      "category_group": "high_energy_failed_barrier",
+      "description": "Crane hoist cable frayed with multiple broken strands while moving 8-ton chemical ISO container over operator walkway. Exclusion zone tape was torn.",
+      "provisional_review_labels": {
+        "expected_sif_flag": true,
+        "expected_priority": "CRITICAL_SIF",
+        "provisional_rationale": "Suspended heavy load with degraded hoist cable and missing exclusion barrier."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": true,
+        "risk_priority": "CRITICAL_SIF",
+        "risk_score": 100.0,
+        "energy_source": "Kinetic / Potential",
+        "barrier_status": "Failed",
+        "barrier_name": "Physical Barricade / Exclusion Zone",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "Near Miss (No Physical Harm)",
+        "explanation": "\ud83d\udea8 SIF Precursor Detected: Report involves high-energy hazard [Suspended / Heavy Loads - Kinetic / Potential] with critical barrier state 'Failed' on barrier [Physical Barricade / Exclusion Zone]. Crucial Safety Distinction: While the actual outcome was logged as 'Near Miss (No Physical Harm)', the potential consequence is evaluated as 'Critical / Fatal'. The presence of uncontrolled high energy means a catastrophic injury was narrowly avoided. Immediate engineering/barrier verification required.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 32.5,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-013",
+      "category_group": "high_energy_failed_barrier",
+      "description": "Electrician opened 480V high voltage distribution panel without performing LOTO lockout or verifying zero energy. Door safety interlock was bypassed with a wedge. Worker used multimeter without arc flash PPE shield.",
+      "provisional_review_labels": {
+        "expected_sif_flag": true,
+        "expected_priority": "CRITICAL_SIF",
+        "provisional_rationale": "Electrical arc flash high energy (>480V) with bypassed interlock and missing PPE."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": true,
+        "risk_priority": "CRITICAL_SIF",
+        "risk_score": 98.0,
+        "energy_source": "Electrical (> 50V)",
+        "barrier_status": "Bypassed",
+        "barrier_name": "LOTO / Lockout-Tagout",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "Near Miss (No Physical Harm)",
+        "explanation": "\ud83d\udea8 SIF Precursor Detected: Report involves high-energy hazard [Electrical (Arc Flash / High Voltage) - Electrical (> 50V)] with critical barrier state 'Bypassed' on barrier [LOTO / Lockout-Tagout]. Crucial Safety Distinction: While the actual outcome was logged as 'Near Miss (No Physical Harm)', the potential consequence is evaluated as 'Critical / Fatal'. The presence of uncontrolled high energy means a catastrophic injury was narrowly avoided. Immediate engineering/barrier verification required.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 28.7,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-014",
+      "category_group": "high_energy_failed_barrier",
+      "description": "Flange on high pressure hydrocarbon line operating at 400 psi began spraying aerosol mist. Isolation valve was seized and secondary block valve was bypassed with temporary jumper.",
+      "provisional_review_labels": {
+        "expected_sif_flag": true,
+        "expected_priority": "CRITICAL_SIF",
+        "provisional_rationale": "High pressure flammable hydrocarbon line with seized valve and bypassed block."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": true,
+        "risk_priority": "CRITICAL_SIF",
+        "risk_score": 98.0,
+        "energy_source": "Pressure (> 100 psi)",
+        "barrier_status": "Bypassed",
+        "barrier_name": "LOTO / Lockout-Tagout",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "Near Miss (No Physical Harm)",
+        "explanation": "\ud83d\udea8 SIF Precursor Detected: Report involves high-energy hazard [Pressurized Fluid / Gas / Steam - Pressure (> 100 psi)] with critical barrier state 'Bypassed' on barrier [LOTO / Lockout-Tagout]. Crucial Safety Distinction: While the actual outcome was logged as 'Near Miss (No Physical Harm)', the potential consequence is evaluated as 'Critical / Fatal'. The presence of uncontrolled high energy means a catastrophic injury was narrowly avoided. Immediate engineering/barrier verification required.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 47.9,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-015",
+      "category_group": "high_energy_failed_barrier",
+      "description": "Confined space vessel entry permit expired while contractors were still inside inspecting sludge. Sniffer gas alarm sounded indicating low oxygen at 18.5%.",
+      "provisional_review_labels": {
+        "expected_sif_flag": true,
+        "expected_priority": "CRITICAL_SIF",
+        "provisional_rationale": "Confined space entry with oxygen deficiency and expired procedural barrier."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": true,
+        "risk_priority": "CRITICAL_SIF",
+        "risk_score": 98.0,
+        "energy_source": "Atmospheric / Entrapment",
+        "barrier_status": "Bypassed",
+        "barrier_name": "Confined Space Entry Permit",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "Near Miss (No Physical Harm)",
+        "explanation": "\ud83d\udea8 SIF Precursor Detected: Report involves high-energy hazard [Confined Space - Atmospheric / Entrapment] with critical barrier state 'Bypassed' on barrier [Confined Space Entry Permit]. Crucial Safety Distinction: While the actual outcome was logged as 'Near Miss (No Physical Harm)', the potential consequence is evaluated as 'Critical / Fatal'. The presence of uncontrolled high energy means a catastrophic injury was narrowly avoided. Immediate engineering/barrier verification required.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 37.9,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-016",
+      "category_group": "high_energy_failed_barrier",
+      "description": "Hydraulic press mechanical interlock guard fell off mounting bracket. Operator reached hand inside die to clear metal shaving before tripping e-stop.",
+      "provisional_review_labels": {
+        "expected_sif_flag": true,
+        "expected_priority": "CRITICAL_SIF",
+        "provisional_rationale": "Mechanical hydraulic pinch point with failed barrier and operator in direct line of fire."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": true,
+        "risk_priority": "CRITICAL_SIF",
+        "risk_score": 100.0,
+        "energy_source": "Mechanical / Kinetic",
+        "barrier_status": "Failed",
+        "barrier_name": "Interlock Machine Guard",
+        "potential_severity": "High / Amputation",
+        "actual_outcome": "First Aid (Bruise)",
+        "explanation": "\ud83d\udea8 SIF Precursor Detected: Report involves high-energy hazard [Mechanical / Rotating Equipment / Pinch Point - Mechanical / Kinetic] with critical barrier state 'Failed' on barrier [Interlock Machine Guard]. Crucial Safety Distinction: While the actual outcome was logged as 'First Aid (Bruise)', the potential consequence is evaluated as 'High / Amputation'. The presence of uncontrolled high energy means a catastrophic injury was narrowly avoided. Immediate engineering/barrier verification required.",
+        "historical_reference": {
+          "matched": false,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": null,
+          "source_file": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-017",
+      "category_group": "high_energy_failed_barrier",
+      "description": "Forklift operator reversed loaded pallet truck down pedestrian crossing without looking. Pedestrian barrier gate was missing and warning strobe was broken. Worker jumped out of path.",
+      "provisional_review_labels": {
+        "expected_sif_flag": true,
+        "expected_priority": "CRITICAL_SIF",
+        "provisional_rationale": "Heavy mobile equipment with missing barrier and pedestrian in line of fire."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": true,
+        "risk_priority": "CRITICAL_SIF",
+        "risk_score": 100.0,
+        "energy_source": "Mobile Kinetic",
+        "barrier_status": "Failed",
+        "barrier_name": "Interlock Machine Guard",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "Near Miss (No Physical Harm)",
+        "explanation": "\ud83d\udea8 SIF Precursor Detected: Report involves high-energy hazard [Heavy Mobile Equipment / Traffic - Mobile Kinetic] with critical barrier state 'Failed' on barrier [Interlock Machine Guard]. Crucial Safety Distinction: While the actual outcome was logged as 'Near Miss (No Physical Harm)', the potential consequence is evaluated as 'Critical / Fatal'. The presence of uncontrolled high energy means a catastrophic injury was narrowly avoided. Immediate engineering/barrier verification required.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 33.9,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-018",
+      "category_group": "high_energy_failed_barrier",
+      "description": "Pipelayers entered an 11-foot deep unshored trench to connect sewer line. Trench walls exhibited tension cracking and cave-in protection box was absent.",
+      "provisional_review_labels": {
+        "expected_sif_flag": true,
+        "expected_priority": "CRITICAL_SIF",
+        "provisional_rationale": "Deep trench excavation (>5ft) with cracking soil and missing cave-in protection."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": true,
+        "risk_priority": "CRITICAL_SIF",
+        "risk_score": 96.0,
+        "energy_source": "Atmospheric / Entrapment",
+        "barrier_status": "Missing",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "Near Miss (No Physical Harm)",
+        "explanation": "\ud83d\udea8 SIF Precursor Detected: Report involves high-energy hazard [Confined Space - Atmospheric / Entrapment] with critical barrier state 'Missing' on barrier [Administrative / PPE]. Crucial Safety Distinction: While the actual outcome was logged as 'Near Miss (No Physical Harm)', the potential consequence is evaluated as 'Critical / Fatal'. The presence of uncontrolled high energy means a catastrophic injury was narrowly avoided. Immediate engineering/barrier verification required.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 34.6,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-019",
+      "category_group": "high_energy_failed_barrier",
+      "description": "Corrosive chemical spill of concentrated sulfuric acid occurred when transfer piping rupture leaked into work trench. Neutralization scrubber was offline.",
+      "provisional_review_labels": {
+        "expected_sif_flag": true,
+        "expected_priority": "CRITICAL_SIF",
+        "provisional_rationale": "Hazardous toxic chemical release with ruptured piping and offline scrubber."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": true,
+        "risk_priority": "CRITICAL_SIF",
+        "risk_score": 100.0,
+        "energy_source": "Pressure (> 100 psi)",
+        "barrier_status": "Failed",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "Near Miss (No Physical Harm)",
+        "explanation": "\ud83d\udea8 SIF Precursor Detected: Report involves high-energy hazard [Pressurized Fluid / Gas / Steam - Pressure (> 100 psi)] with critical barrier state 'Failed' on barrier [Administrative / PPE]. Crucial Safety Distinction: While the actual outcome was logged as 'Near Miss (No Physical Harm)', the potential consequence is evaluated as 'Critical / Fatal'. The presence of uncontrolled high energy means a catastrophic injury was narrowly avoided. Immediate engineering/barrier verification required.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 18.9,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-020",
+      "category_group": "high_energy_failed_barrier",
+      "description": "Molten iron ladle swung unexpectedly over maintenance pit when crane brake slipped. Emergency stop interlock failed to engage.",
+      "provisional_review_labels": {
+        "expected_sif_flag": true,
+        "expected_priority": "CRITICAL_SIF",
+        "provisional_rationale": "Thermal molten metal hazard with slipping crane brake and failed e-stop."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": true,
+        "risk_priority": "CRITICAL_SIF",
+        "risk_score": 100.0,
+        "energy_source": "Kinetic / Potential",
+        "barrier_status": "Failed",
+        "barrier_name": "Interlock Machine Guard",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "Near Miss (No Physical Harm)",
+        "explanation": "\ud83d\udea8 SIF Precursor Detected: Report involves high-energy hazard [Suspended / Heavy Loads - Kinetic / Potential] with critical barrier state 'Failed' on barrier [Interlock Machine Guard]. Crucial Safety Distinction: While the actual outcome was logged as 'Near Miss (No Physical Harm)', the potential consequence is evaluated as 'Critical / Fatal'. The presence of uncontrolled high energy means a catastrophic injury was narrowly avoided. Immediate engineering/barrier verification required.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 38.4,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-021",
+      "category_group": "high_energy_failed_barrier",
+      "description": "Superheated steam line operating at 600 psi developed steam leak around valve bonnet. Steam trap was bypassed with open bypass valve.",
+      "provisional_review_labels": {
+        "expected_sif_flag": true,
+        "expected_priority": "CRITICAL_SIF",
+        "provisional_rationale": "Extreme pressurized steam leak with bypassed isolation control."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": true,
+        "risk_priority": "CRITICAL_SIF",
+        "risk_score": 98.0,
+        "energy_source": "Pressure (> 100 psi)",
+        "barrier_status": "Bypassed",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "Near Miss (No Physical Harm)",
+        "explanation": "\ud83d\udea8 SIF Precursor Detected: Report involves high-energy hazard [Pressurized Fluid / Gas / Steam - Pressure (> 100 psi)] with critical barrier state 'Bypassed' on barrier [Administrative / PPE]. Crucial Safety Distinction: While the actual outcome was logged as 'Near Miss (No Physical Harm)', the potential consequence is evaluated as 'Critical / Fatal'. The presence of uncontrolled high energy means a catastrophic injury was narrowly avoided. Immediate engineering/barrier verification required.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 25.5,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-022",
+      "category_group": "high_energy_failed_barrier",
+      "description": "Contractor working on pipe rack at 28ft height slipped on wet metal grating. Safety harness lanyard was hooked to unrated electrical conduit instead of certified static line anchor.",
+      "provisional_review_labels": {
+        "expected_sif_flag": true,
+        "expected_priority": "CRITICAL_SIF",
+        "provisional_rationale": "Fall from height (>20ft) with invalid anchor point creating severe SIF precursor."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": true,
+        "risk_priority": "CRITICAL_SIF",
+        "risk_score": 100.0,
+        "energy_source": "Kinetic (Gravity)",
+        "barrier_status": "Failed",
+        "barrier_name": "Fall Arrest Harness",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "Near Miss (No Physical Harm)",
+        "explanation": "\ud83d\udea8 SIF Precursor Detected: Report involves high-energy hazard [Gravity / Falls from Height - Kinetic (Gravity)] with critical barrier state 'Failed' on barrier [Fall Arrest Harness]. Crucial Safety Distinction: While the actual outcome was logged as 'Near Miss (No Physical Harm)', the potential consequence is evaluated as 'Critical / Fatal'. The presence of uncontrolled high energy means a catastrophic injury was narrowly avoided. Immediate engineering/barrier verification required.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 25.5,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-023",
+      "category_group": "effective_safeguards",
+      "description": "While working on an elevated pipe rack at 20 feet, a worker slipped on wet grating but the safety harness arrest line and certified static anchor held firmly, completely arresting the fall. The barrier held effectively and prevented any harm or injury.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "HIGH_PRECURSOR",
+        "provisional_rationale": "High-energy gravity vector present, but certified fall arrest harness held effectively."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "HIGH_PRECURSOR",
+        "risk_score": 63.0,
+        "energy_source": "Kinetic (Gravity)",
+        "barrier_status": "Effective",
+        "barrier_name": "Fall Arrest Harness",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "Near Miss (No Physical Harm)",
+        "explanation": "Evaluated as HIGH_PRECURSOR. Identified hazard [Gravity / Falls from Height]. Barrier status evaluated as 'Effective'. Actual outcome: 'Near Miss (No Physical Harm)', Potential severity: 'Critical / Fatal'. Recommended for standard corrective action follow-up.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 25.6,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-024",
+      "category_group": "effective_safeguards",
+      "description": "Pressure surged inside separator vessel reaching 420 psi during startup, but pressure safety valve (PSV) lifted as designed and relieved pressure into flare header. Barrier held effectively.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "HIGH_PRECURSOR",
+        "provisional_rationale": "High pressure hazard present, but engineered PSV performed as designed."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "HIGH_PRECURSOR",
+        "risk_score": 63.0,
+        "energy_source": "Pressure (> 100 psi)",
+        "barrier_status": "Effective",
+        "barrier_name": "Pressure Safety Valve (PSV)",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "No Harm",
+        "explanation": "Evaluated as HIGH_PRECURSOR. Identified hazard [Pressurized Fluid / Gas / Steam]. Barrier status evaluated as 'Effective'. Actual outcome: 'No Harm', Potential severity: 'Critical / Fatal'. Recommended for standard corrective action follow-up.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 23.4,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-025",
+      "category_group": "effective_safeguards",
+      "description": "Operator hand breached envelope of punch press while clearing scrap, but optical light curtain interlock tripped instantly and stopped ram within 30ms. Barrier held and prevented harm.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "HIGH_PRECURSOR",
+        "provisional_rationale": "Pinch point exposure, but engineered optical interlock stopped ram safely."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "HIGH_PRECURSOR",
+        "risk_score": 63.0,
+        "energy_source": "Mechanical / Kinetic",
+        "barrier_status": "Effective",
+        "barrier_name": "Interlock Machine Guard",
+        "potential_severity": "High / Amputation",
+        "actual_outcome": "No Harm",
+        "explanation": "Evaluated as HIGH_PRECURSOR. Identified hazard [Mechanical / Rotating Equipment / Pinch Point]. Barrier status evaluated as 'Effective'. Actual outcome: 'No Harm', Potential severity: 'High / Amputation'. Recommended for standard corrective action follow-up.",
+        "historical_reference": {
+          "matched": false,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": null,
+          "source_file": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-026",
+      "category_group": "effective_safeguards",
+      "description": "Butane vapor leaked from valve packing during packing adjustment. Continuous gas detector alarm sounded at 10% LEL, triggering automated deluge and ESD shutdown. Containment barrier held.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "HIGH_PRECURSOR",
+        "provisional_rationale": "Flammable gas leak, but fixed gas monitor and ESD deluge operated effectively."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "HIGH_PRECURSOR",
+        "risk_score": 63.0,
+        "energy_source": "Pressure (> 100 psi)",
+        "barrier_status": "Effective",
+        "barrier_name": "Continuous Gas Detector",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "No Injury",
+        "explanation": "Evaluated as HIGH_PRECURSOR. Identified hazard [Pressurized Fluid / Gas / Steam]. Barrier status evaluated as 'Effective'. Actual outcome: 'No Injury', Potential severity: 'Critical / Fatal'. Recommended for standard corrective action follow-up.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 25.0,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-027",
+      "category_group": "effective_safeguards",
+      "description": "Heavy haul truck backed toward wash bay, but proximity radar sensor sounded alarm and automatic braking stopped vehicle 12 feet before pedestrian walkway. Barrier held.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "HIGH_PRECURSOR",
+        "provisional_rationale": "Mobile vehicular hazard, but proximity sensor stopped truck safely."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "HIGH_PRECURSOR",
+        "risk_score": 63.0,
+        "energy_source": "Mobile Kinetic",
+        "barrier_status": "Effective",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "No Injury",
+        "explanation": "Evaluated as HIGH_PRECURSOR. Identified hazard [Heavy Mobile Equipment / Traffic]. Barrier status evaluated as 'Effective'. Actual outcome: 'No Injury', Potential severity: 'Critical / Fatal'. Recommended for standard corrective action follow-up.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 29.1,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-028",
+      "category_group": "effective_safeguards",
+      "description": "Electrician tested terminal on 480V motor controller. Minor arc flash occurred when meter slipped, but full arc flash face shield and rated suit contained the arc blast. PPE barrier held firmly.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "HIGH_PRECURSOR",
+        "provisional_rationale": "Arc flash energy release, but rated arc flash PPE completely prevented injury."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "HIGH_PRECURSOR",
+        "risk_score": 63.0,
+        "energy_source": "Electrical (> 50V)",
+        "barrier_status": "Effective",
+        "barrier_name": "Interlock Machine Guard",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "No Injury",
+        "explanation": "Evaluated as HIGH_PRECURSOR. Identified hazard [Electrical (Arc Flash / High Voltage)]. Barrier status evaluated as 'Effective'. Actual outcome: 'No Injury', Potential severity: 'Critical / Fatal'. Recommended for standard corrective action follow-up.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 37.2,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-029",
+      "category_group": "effective_safeguards",
+      "description": "Tagline broke while crane moved 4-ton steel girder. The girder swung toward aisle, but physical exclusion barricade kept all personnel outside drop zone. Barrier held.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "HIGH_PRECURSOR",
+        "provisional_rationale": "Suspended load movement, but exclusion zone barricade prevented exposure."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "HIGH_PRECURSOR",
+        "risk_score": 63.0,
+        "energy_source": "Kinetic / Potential",
+        "barrier_status": "Effective",
+        "barrier_name": "Physical Barricade / Exclusion Zone",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "No Harm",
+        "explanation": "Evaluated as HIGH_PRECURSOR. Identified hazard [Suspended / Heavy Loads]. Barrier status evaluated as 'Effective'. Actual outcome: 'No Harm', Potential severity: 'Critical / Fatal'. Recommended for standard corrective action follow-up.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 30.7,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-030",
+      "category_group": "effective_safeguards",
+      "description": "Hydraulic hose on mobile crane outrigger leaked fluid under pressure, but dual counterbalance check valve locked outrigger solidly in place. Engineered barrier held.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "HIGH_PRECURSOR",
+        "provisional_rationale": "Hydraulic line failure, but engineered check valve maintained outrigger position."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "HIGH_PRECURSOR",
+        "risk_score": 63.0,
+        "energy_source": "Kinetic / Potential",
+        "barrier_status": "Effective",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "No Harm",
+        "explanation": "Evaluated as HIGH_PRECURSOR. Identified hazard [Suspended / Heavy Loads]. Barrier status evaluated as 'Effective'. Actual outcome: 'No Harm', Potential severity: 'Critical / Fatal'. Recommended for standard corrective action follow-up.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 31.7,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-031",
+      "category_group": "effective_safeguards",
+      "description": "During planned vessel entry, personal multi-gas detector sounded alarm at 10 ppm H2S. Attendant immediately initiated extraction protocol and both workers evacuated safely. Safety barrier held.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "HIGH_PRECURSOR",
+        "provisional_rationale": "Toxic H2S atmospheric hazard, but gas detector and attendant protocol functioned as designed."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "HIGH_PRECURSOR",
+        "risk_score": 63.0,
+        "energy_source": "Chemical / Toxic",
+        "barrier_status": "Effective",
+        "barrier_name": "Continuous Gas Detector",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "No Harm",
+        "explanation": "Evaluated as HIGH_PRECURSOR. Identified hazard [Hazardous Chemical / Toxic Atmosphere]. Barrier status evaluated as 'Effective'. Actual outcome: 'No Harm', Potential severity: 'Critical / Fatal'. Recommended for standard corrective action follow-up.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 24.1,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-032",
+      "category_group": "effective_safeguards",
+      "description": "Sparks from cutting torch bounced near paint storage cabinet, but certified fire watch deployed fire extinguisher within 2 seconds. Fire watch barrier held effectively.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "HIGH_PRECURSOR",
+        "provisional_rationale": "Thermal ignition hazard, but dedicated fire watch controlled spark immediately."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "HIGH_PRECURSOR",
+        "risk_score": 63.0,
+        "energy_source": "Thermal / Radiation",
+        "barrier_status": "Effective",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "No Harm",
+        "explanation": "Evaluated as HIGH_PRECURSOR. Identified hazard [Thermal / Fire / Explosion]. Barrier status evaluated as 'Effective'. Actual outcome: 'No Harm', Potential severity: 'Critical / Fatal'. Recommended for standard corrective action follow-up.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 26.7,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": false,
+        "review_reasons": []
+      }
+    },
+    {
+      "scenario_id": "VAL-033",
+      "category_group": "ambiguous_reports",
+      "description": "Worker reported feeling slightly lightheaded while applying industrial epoxy coating inside utility basement room. Ventilation blower was operating.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "MEDIUM_RISK",
+        "provisional_rationale": "Ambiguous chemical/ventilation report without confirmation of toxic threshold or barrier failure."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "MEDIUM_RISK",
+        "risk_score": 47.5,
+        "energy_source": "Low / Undetermined",
+        "barrier_status": "Intact",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Medium",
+        "actual_outcome": "Near Miss (No Physical Harm)",
+        "explanation": "Evaluated as MEDIUM_RISK. Identified hazard [General Hazard / Unclassified]. Barrier status evaluated as 'Intact'. Actual outcome: 'Near Miss (No Physical Harm)', Potential severity: 'Medium'. Recommended for standard corrective action follow-up.",
+        "historical_reference": {
+          "matched": false,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": null,
+          "source_file": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": true,
+        "review_reasons": [
+          "Ambiguous / edge-case scenario requires human review by definition"
+        ]
+      }
+    },
+    {
+      "scenario_id": "VAL-034",
+      "category_group": "ambiguous_reports",
+      "description": "Yard hostler tractor observed traveling briskly across container parking area during evening shift. No pedestrians present in section.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "MEDIUM_RISK",
+        "provisional_rationale": "Mobile equipment behavior without clear line-of-fire pedestrian interface."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "HIGH_PRECURSOR",
+        "risk_score": 75.0,
+        "energy_source": "Mobile Kinetic",
+        "barrier_status": "Intact",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "No Harm",
+        "explanation": "Evaluated as HIGH_PRECURSOR. Identified hazard [Heavy Mobile Equipment / Traffic]. Barrier status evaluated as 'Intact'. Actual outcome: 'No Harm', Potential severity: 'Critical / Fatal'. Recommended for standard corrective action follow-up.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 28.0,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MISMATCH",
+        "needs_manual_review": true,
+        "review_reasons": [
+          "Priority Badge Discrepancy: expected MEDIUM_RISK, got HIGH_PRECURSOR (score 75.0)",
+          "Ambiguous / edge-case scenario requires human review by definition"
+        ]
+      }
+    },
+    {
+      "scenario_id": "VAL-035",
+      "category_group": "ambiguous_reports",
+      "description": "High pitched whistling sound and pipe vibration reported near bypass manifold. Local pressure gauge was unreadable due to foggy glass.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "MEDIUM_RISK",
+        "provisional_rationale": "Possible pressure/vibration anomaly without confirmed rupture or leak."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "MEDIUM_RISK",
+        "risk_score": 47.5,
+        "energy_source": "Low / Undetermined",
+        "barrier_status": "Intact",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Medium",
+        "actual_outcome": "No Injury",
+        "explanation": "Evaluated as MEDIUM_RISK. Identified hazard [General Hazard / Unclassified]. Barrier status evaluated as 'Intact'. Actual outcome: 'No Injury', Potential severity: 'Medium'. Recommended for standard corrective action follow-up.",
+        "historical_reference": {
+          "matched": false,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": null,
+          "source_file": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": true,
+        "review_reasons": [
+          "Ambiguous / edge-case scenario requires human review by definition"
+        ]
+      }
+    },
+    {
+      "scenario_id": "VAL-036",
+      "category_group": "ambiguous_reports",
+      "description": "Machinist tripped over low-profile electrical conduit on shop floor walkway. Sustained bruised knee, applied cold pack at first aid clinic.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "MEDIUM_RISK",
+        "provisional_rationale": "Level walkway trip and bruise; not a fall from height."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "MEDIUM_RISK",
+        "risk_score": 47.5,
+        "energy_source": "Low / Undetermined",
+        "barrier_status": "Intact",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Medium",
+        "actual_outcome": "Medical Treatment",
+        "explanation": "Evaluated as MEDIUM_RISK. Identified hazard [General Hazard / Unclassified]. Barrier status evaluated as 'Intact'. Actual outcome: 'Medical Treatment', Potential severity: 'Medium'. Recommended for standard corrective action follow-up.",
+        "historical_reference": {
+          "matched": false,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": null,
+          "source_file": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": true,
+        "review_reasons": [
+          "Ambiguous / edge-case scenario requires human review by definition"
+        ]
+      }
+    },
+    {
+      "scenario_id": "VAL-037",
+      "category_group": "ambiguous_reports",
+      "description": "Faint sulfur odor detected along fence line near cooling tower. Portable gas check showed 0 ppm H2S. Suspected wind drift from municipal sewer.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "LOW_ROUTINE",
+        "provisional_rationale": "Odor complaint verified safe with 0 ppm gas reading."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "MEDIUM_RISK",
+        "risk_score": 47.5,
+        "energy_source": "Low / Undetermined",
+        "barrier_status": "Intact",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Medium",
+        "actual_outcome": "No Harm",
+        "explanation": "Evaluated as MEDIUM_RISK. Identified hazard [General Hazard / Unclassified]. Barrier status evaluated as 'Intact'. Actual outcome: 'No Harm', Potential severity: 'Medium'. Recommended for standard corrective action follow-up.",
+        "historical_reference": {
+          "matched": false,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": null,
+          "source_file": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MISMATCH",
+        "needs_manual_review": true,
+        "review_reasons": [
+          "Priority Badge Discrepancy: expected LOW_ROUTINE, got MEDIUM_RISK (score 47.5)",
+          "Ambiguous / edge-case scenario requires human review by definition"
+        ]
+      }
+    },
+    {
+      "scenario_id": "VAL-038",
+      "category_group": "ambiguous_reports",
+      "description": "Scaffold had yellow warning tag denoting incomplete handrail at west end. Insulators entered to stage insulation blankets without attaching lanyards to main tank wire.",
+      "provisional_review_labels": {
+        "expected_sif_flag": true,
+        "expected_priority": "CRITICAL_SIF",
+        "provisional_rationale": "Work on incomplete scaffold platform without fall arrest at height."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": true,
+        "risk_priority": "CRITICAL_SIF",
+        "risk_score": 96.0,
+        "energy_source": "Kinetic (Gravity)",
+        "barrier_status": "Missing",
+        "barrier_name": "Fall Arrest Harness",
+        "potential_severity": "Critical / Fatal",
+        "actual_outcome": "Near Miss (No Physical Harm)",
+        "explanation": "\ud83d\udea8 SIF Precursor Detected: Report involves high-energy hazard [Gravity / Falls from Height - Kinetic (Gravity)] with critical barrier state 'Missing' on barrier [Fall Arrest Harness]. Crucial Safety Distinction: While the actual outcome was logged as 'Near Miss (No Physical Harm)', the potential consequence is evaluated as 'Critical / Fatal'. The presence of uncontrolled high energy means a catastrophic injury was narrowly avoided. Immediate engineering/barrier verification required.",
+        "historical_reference": {
+          "matched": true,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": 24.8,
+          "source_file": null,
+          "hazard_category": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": true,
+        "review_reasons": [
+          "Ambiguous / edge-case scenario requires human review by definition"
+        ]
+      }
+    },
+    {
+      "scenario_id": "VAL-039",
+      "category_group": "ambiguous_reports",
+      "description": "Small diesel fluid puddle (approx 1 quart) found under parked delivery truck in gravel parking lot. Absorbent pad applied.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "MEDIUM_RISK",
+        "provisional_rationale": "Contained minor vehicle fluid leak on outdoor gravel surface."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "MEDIUM_RISK",
+        "risk_score": 47.5,
+        "energy_source": "Low / Undetermined",
+        "barrier_status": "Intact",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Medium",
+        "actual_outcome": "No Injury",
+        "explanation": "Evaluated as MEDIUM_RISK. Identified hazard [General Hazard / Unclassified]. Barrier status evaluated as 'Intact'. Actual outcome: 'No Injury', Potential severity: 'Medium'. Recommended for standard corrective action follow-up.",
+        "historical_reference": {
+          "matched": false,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": null,
+          "source_file": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MATCH",
+        "needs_manual_review": true,
+        "review_reasons": [
+          "Ambiguous / edge-case scenario requires human review by definition"
+        ]
+      }
+    },
+    {
+      "scenario_id": "VAL-040",
+      "category_group": "ambiguous_reports",
+      "description": "Unlabeled squeeze bottle containing clear liquid discovered on maintenance workbench. Liquid confirmed to be demineralized water for battery topping.",
+      "provisional_review_labels": {
+        "expected_sif_flag": false,
+        "expected_priority": "LOW_ROUTINE",
+        "provisional_rationale": "Labeling deficiency resolved as benign demineralized water."
+      },
+      "actual_engine_output": {
+        "sif_precursor_flag": false,
+        "risk_priority": "MEDIUM_RISK",
+        "risk_score": 47.5,
+        "energy_source": "Low / Undetermined",
+        "barrier_status": "Intact",
+        "barrier_name": "Administrative / PPE",
+        "potential_severity": "Medium",
+        "actual_outcome": "No Harm",
+        "explanation": "Evaluated as MEDIUM_RISK. Identified hazard [General Hazard / Unclassified]. Barrier status evaluated as 'Intact'. Actual outcome: 'No Harm', Potential severity: 'Medium'. Recommended for standard corrective action follow-up.",
+        "historical_reference": {
+          "matched": false,
+          "incident_id": null,
+          "title": null,
+          "relevance_score": null,
+          "source_file": null
+        }
+      },
+      "concordance": {
+        "sif_flag_status": "MATCH",
+        "priority_status": "MISMATCH",
+        "needs_manual_review": true,
+        "review_reasons": [
+          "Priority Badge Discrepancy: expected LOW_ROUTINE, got MEDIUM_RISK (score 47.5)",
+          "Ambiguous / edge-case scenario requires human review by definition"
+        ]
+      }
+    }
+  ]
+}

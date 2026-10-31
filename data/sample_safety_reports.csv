@@ -1,0 +1,9 @@
+facility,unit_or_area,report_date,incident_type,actual_outcome,description
+Gulf Coast Refinery,Cracking Unit 4,2026-10-11,near_miss,No Injury,Flange on high pressure hydrocarbon line operating at 400 psi began spraying aerosol mist. Isolation valve was seized and secondary block valve was bypassed with temporary jumper.
+Midwest Heavy Manufacturing,Press Shop 2,2026-10-10,unsafe_condition,First Aid (Bruise),Hydraulic press mechanical interlock guard fell off mounting bracket. Operator reached hand inside die to clear metal shaving before tripping e-stop.
+Rotterdam Chemical Complex,Loading Berth A,2026-10-09,near_miss,No Harm,Crane hoist cable frayed with multiple broken strands while moving 8-ton chemical ISO container over operator walkway. Exclusion zone tape was torn.
+Texas Petrochemical Hub,Boiler House East,2026-10-08,unsafe_act,No Injury,Technician opened 480V motor control center switchgear without wearing arc-rated face shield or performing zero voltage verification test.
+Great Lakes Logistics Center,Aisle 14,2026-10-07,unsafe_condition,No Harm,Small plastic coffee cup lid on floor in administration lobby near water cooler.
+Midwest Heavy Manufacturing,Tooling Room,2026-10-06,unsafe_condition,No Harm,Flickering overhead lightbulb in tool calibration office. Work order requested.
+Gulf Coast Refinery,Tank Farm TK-22,2026-10-05,near_miss,No Injury,Confined space vessel entry permit expired while contractors were still inside inspecting sludge. Sniffer gas alarm sounded indicating low oxygen at 18.5%.
+Rotterdam Chemical Complex,Platform 3,2026-10-04,near_miss,No Harm,Contractor working on pipe rack at 28ft height slipped on wet metal grating. Safety harness lanyard was hooked to unrated electrical conduit instead of certified static line anchor.

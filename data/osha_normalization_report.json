@@ -1,0 +1,87 @@
+{
+  "execution_timestamp": "2026-10-13T22:41:13.664215",
+  "total_files_processed": 5,
+  "total_records_processed": 4742,
+  "total_duplicates_found": 24,
+  "total_encoding_cleanups": 596,
+  "shifted_headers_corrected": 1094,
+  "dates_parsed_successfully": 4742,
+  "dates_unresolved": 0,
+  "states_parsed_successfully": 4735,
+  "states_unresolved": 7,
+  "hazard_category_distribution": {
+    "Environmental / Medical / Other": 255,
+    "Gravity / Falls from Height": 1686,
+    "Heavy Mobile Equipment / Vehicular": 1191,
+    "Uncategorized / General Event": 1159,
+    "Pressurized Equipment / Piping Burst": 45,
+    "Thermal / Fire / Explosion": 240,
+    "Electrical (Shock / Arc Flash / High Voltage)": 348,
+    "Suspended / Heavy Loads & Rigging": 155,
+    "Confined Space / Trench Engulfment": 142,
+    "Mechanical / Rotating Equipment / Pinch Point": 170,
+    "Hazardous Chemicals / Toxic Atmosphere / Asphyxiation": 108
+  },
+  "file_summaries": [
+    {
+      "source_file": "media_1791909413664.csv",
+      "total_rows_read": 200,
+      "schema_detected": "5_column_standard_format",
+      "shifted_headers_corrected": 0,
+      "duplicates_in_file": 1,
+      "dates_parsed": 200,
+      "dates_failed": 0,
+      "states_parsed": 200,
+      "states_missing": 0,
+      "encoding_artifacts_cleaned": 26
+    },
+    {
+      "source_file": "media_1791909413681.csv",
+      "total_rows_read": 1167,
+      "schema_detected": "5_column_standard_format",
+      "shifted_headers_corrected": 0,
+      "duplicates_in_file": 1,
+      "dates_parsed": 1167,
+      "dates_failed": 0,
+      "states_parsed": 1162,
+      "states_missing": 5,
+      "encoding_artifacts_cleaned": 405
+    },
+    {
+      "source_file": "media_1791909413689.csv",
+      "total_rows_read": 1094,
+      "schema_detected": "5_column_fy2012_shifted_header",
+      "shifted_headers_corrected": 1094,
+      "duplicates_in_file": 14,
+      "dates_parsed": 1094,
+      "dates_failed": 0,
+      "states_parsed": 1093,
+      "states_missing": 1,
+      "encoding_artifacts_cleaned": 0
+    },
+    {
+      "source_file": "media_1791909413721.csv",
+      "total_rows_read": 1157,
+      "schema_detected": "5_column_standard_format",
+      "shifted_headers_corrected": 0,
+      "duplicates_in_file": 3,
+      "dates_parsed": 1157,
+      "dates_failed": 0,
+      "states_parsed": 1156,
+      "states_missing": 1,
+      "encoding_artifacts_cleaned": 165
+    },
+    {
+      "source_file": "media_1791909413737.csv",
+      "total_rows_read": 1124,
+      "schema_detected": "4_column_2013_format",
+      "shifted_headers_corrected": 0,
+      "duplicates_in_file": 5,
+      "dates_parsed": 1124,
+      "dates_failed": 0,
+      "states_parsed": 1124,
+      "states_missing": 0,
+      "encoding_artifacts_cleaned": 0
+    }
+  ]
+}
