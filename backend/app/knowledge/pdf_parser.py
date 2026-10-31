@@ -28,7 +28,13 @@ REPORT_METADATA = {
     }
 }
 
-IOCL_JSON_PATH = "c:/Users/LENOVO/Documents/SAJAG/data/priority_reports/iocl_haldia_pages.json"
+_base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+_root_dir = os.path.dirname(_base_dir)
+_data_dir = os.getenv(
+    "DATA_DIR",
+    os.path.join(_base_dir, "data") if os.path.exists(os.path.join(_base_dir, "data")) else os.path.join(_root_dir, "data")
+)
+IOCL_JSON_PATH = os.path.join(_data_dir, "priority_reports", "iocl_haldia_pages.json")
 
 class PDFReportParser:
     """

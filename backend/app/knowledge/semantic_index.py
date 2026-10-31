@@ -7,9 +7,16 @@ from app.knowledge.pdf_parser import PDFReportParser
 from app.knowledge.chunker import ReportChunker
 from app.knowledge.document_qa import DocumentQAEngine
 
-PRIORITY_REPORTS_DIR = "c:/Users/LENOVO/Documents/SAJAG/data/priority_reports"
-INDEX_RECORDS_PATH = "c:/Users/LENOVO/Documents/SAJAG/data/priority_knowledge_records.json"
-INDEX_EMBEDDINGS_PATH = "c:/Users/LENOVO/Documents/SAJAG/data/priority_knowledge_embeddings.npy"
+_base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+_root_dir = os.path.dirname(_base_dir)
+DATA_DIR = os.getenv(
+    "DATA_DIR",
+    os.path.join(_base_dir, "data") if os.path.exists(os.path.join(_base_dir, "data")) else os.path.join(_root_dir, "data")
+)
+
+PRIORITY_REPORTS_DIR = os.path.join(DATA_DIR, "priority_reports")
+INDEX_RECORDS_PATH = os.path.join(DATA_DIR, "priority_knowledge_records.json")
+INDEX_EMBEDDINGS_PATH = os.path.join(DATA_DIR, "priority_knowledge_embeddings.npy")
 
 class SemanticKnowledgeIndex:
     """
